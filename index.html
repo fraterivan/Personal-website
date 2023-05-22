@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <link href="/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+    <title>ivanOS | Welcome!</title>
+</head>
+<body>
+    <div class="window" style="width: 400px" id="window">
+        <div class="title-bar" id="windowheader">
+            <div class="title-bar-text">Welcome!</div>
+            <div class="title-bar-controls">
+                <a href="help.html" target="_self"><button aria-label="Help" id="help"></button></a>
+                <button aria-label="Close" id="click" onclick="closeButton()"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <menu role="tablist">
+                <button aria-selected="true" aria-controls="about" id="click">About me</button>
+                <button aria-controls="skills" id="click">My skills</button>
+                <button aria-controls="contact" id="click">Contact</button>
+            </menu>
+
+            <article role="tabpanel" id="about">
+                <p>Some information about me.</p>
+                <ul class="tree-view">
+                    <li>
+                        Name
+                        <ul>
+                            <li>Iván Fráter</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Age
+                        <ul>
+                            <li><span id="age"></span> years old</li>
+                        </ul>
+                    </li>
+                    <li>
+                        From
+                        <ul>
+                            <li>Hungary</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Occupation
+                        <ul>
+                            <li>Student at University of Debrecen</li>
+                        </ul>
+                        <ul>
+                            <li>Trainee at <a href="https://www.deutschetelekomitsolutions.hu" target="_blank" id="click"><strong style="color: blue;">Deutsche Telekom IT Solutions</strong></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <article role="tabpanel" hidden id="skills">
+                <p>Check out my skills.</p>
+                <ul class="tree-view">
+                    <li>
+                        Networking
+                        <ul>
+                            <li>Using Cisco and Juniper devices.</li>
+                            <li><progress max="100" value="75"></progress></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Programming
+                        <ul>
+                            <li>Web development, JavaScript, C#</li>
+                            <li><progress max="100" value="45"></progress></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Languages
+                        <ul>
+                            <li>Hungarian</li>
+                            <li><progress max="100" value="100"></progress></li>
+                            <li>English</li>
+                            <li><progress max="100" value="85"></progress></li>
+                            <li>German</li>
+                            <li><progress max="100" value="20"></progress></li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+    
+            <article role="tabpanel" hidden id="contact">
+                <p>Contact me in these platforms.</p>
+                <a href="https://github.com/fraterivan" target="_blank" id="click"><button>GitHub</button></a>
+                <a href="https://www.linkedin.com/in/fraterivan/" target="_blank" id="click"><button>LinkedIn</button></a>
+                <a href="mailto:fraterivan03@gmail.com" target="_blank" id="click"><button>E-mail</button></a>
+            </article>
+        </div>
+
+        <div class="status-bar">
+            <p class="status-bar-field">© Iván Fráter, 2023</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

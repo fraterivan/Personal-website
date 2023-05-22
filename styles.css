@@ -1,0 +1,25 @@
+body {
+    background: url("assets/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: url("assets/CursorsXP.cur"), default;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#windowheader {
+    cursor: url("assets/Cursor_10.cur"), move;
+}
+
+#help:hover {
+    cursor: url("assets/Cursor_13.cur"), help;
+}
+
+#click {
+    cursor: url("assets/Cursor_15.cur"), pointer;
+}
